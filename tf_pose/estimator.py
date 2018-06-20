@@ -124,6 +124,7 @@ class PoseEstimator:
                     float(pafprocess.get_part_y(c_idx)) / heat_mat.shape[0],
                     pafprocess.get_part_score(c_idx)
                 )
+                human.uidx_list.add('%d-%d' % (human_id, part_idx))
 
             if is_added:
                 score = pafprocess.get_score(human_id)
